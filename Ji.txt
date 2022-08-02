@@ -1,0 +1,29 @@
+username = "klkl4545"
+password = "klkl4545"
+client_seed = randomseed()
+simulation = false
+target     = 69
+currency   = "trx"
+multiplier = 2
+base       = 0.001
+preroll    = 5 
+prebet     = 0.0001 
+nextbet =base
+stretch    = 3 
+targetProfit=1.01
+function dobet() 
+    target = (low=15,high=21)
+ tmp = currentstreak+preroll 
+ if win then 
+     nextbet=prebet 
+ else 
+     if tmp == 0 then 
+         nextbet=base 
+     end 
+     if tmp < 0 then
+         if tmp %stretch == 0 then 
+             nextbet=previousbet*multiplier 
+         end 
+     end 
+ end 
+end

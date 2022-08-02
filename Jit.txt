@@ -22,7 +22,7 @@ function dobet()
         target={low=3.4, high=4.3}
         nextbet = previousbet * 0.1
    end
-   if (currentstreak <= -2) then
+   if (currentstreak < -2) then
         target={low=3.4, high=4.3}
         nextbet = previousbet * 1.59738
    end

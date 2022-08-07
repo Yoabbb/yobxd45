@@ -1,0 +1,60 @@
+username = "klkl4545"
+password = "klkl4545"
+client_seed = randomseed()
+simulation = false
+currency= "gem"
+basebet = .01
+target = {low=4,high=5.3}
+nextbet = basebet
+multi = 1.22
+cs = currentStreak
+pb  = previousbet
+function kit()
+    target = c1
+    tmp = currentStreak+preroll
+    if win then
+        nextbet=prebet
+    else
+        if tmp == 0 then
+            nextbet=basebet
+        end
+        if tmp < 0 then
+            if tmp %stretch == 0 then
+                nextbet=previousbet*multiplier
+            end
+        end
+    end
+end
+function dobet()
+    target = {low=1.3,high=1.63}
+    if win then
+        nextbet = basebet
+    else
+        nextbet = previousbet
+    end
+    if currentStreak < -1 then
+        target = {low=6,high=12.3}
+        nextbet = previousbet *multi
+    end
+   
+    if currentStreak < -2 then
+        target = {low=6,high=8.3}
+        nextbet = previousbet *multi
+    end
+    if currentStreak < -3 then
+        target = {low=2.89,high=3.43}
+        nextbet = previousbet *multi
+    end
+    if currentStreak < -4 then
+        target = {low=30,high=40.3}
+        nextbet = previousbet *multi
+    end
+    if currentStreak < -5 then
+        target = {low=15,high=20.3}
+        nextbet = previousbet *multi
+    end
+    if currentStreak < -6 then
+        target = {low=2.7,high=3.3}
+        nextbet = previousbet *multi
+    end
+ end   

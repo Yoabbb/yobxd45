@@ -1,5 +1,5 @@
-username = "klkl4545"
-password = "klkl4545"
+username = "45"
+password = "klkl"
 client_seed = randomseed()
 simulation = false
 currency= "gem"
